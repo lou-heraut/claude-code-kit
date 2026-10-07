@@ -5,26 +5,27 @@ Des règles courtes pour Claude Code, à installer dans `~/.claude/`, pensées p
 | Règle | Ce qu'elle fait |
 |---|---|
 | `rules/security.md` et `settings/security.json` | pas de connexion à d'autres machines, pas de lecture de secret, annonce avant d'utiliser un accès en votre nom |
+| `rules/posture.md` | l'esprit du travail : recherche publique, robuste et pérenne, keep it clean, keep it simple |
 
 État au 7 octobre 2026, avec Claude Code 2.1.292.
 
 ## Installer
 
-**1. Le compte, en premier.** Sur `claude.ai/settings/data-privacy-controls`, décocher l'option qui autorise l'utilisation de vos données pour l'entraînement des modèles (au 7 octobre 2026 : « Allow the use of your chats and coding sessions to train and improve Anthropic AI models »). Elle vaut aussi pour Claude Code. Vos conversations sont alors gardées 30 jours au lieu de 5 ans.
+**1. Le compte, en premier** (pour la règle de sécurité). Sur `claude.ai/settings/data-privacy-controls`, décocher l'option qui autorise l'utilisation de vos données pour l'entraînement des modèles (au 7 octobre 2026 : « Allow the use of your chats and coding sessions to train and improve Anthropic AI models »). Elle vaut aussi pour Claude Code. Vos conversations sont alors gardées 30 jours au lieu de 5 ans.
 
-**2. La règle.** Ouvrir Claude Code dans ce dossier et coller :
+**2. Les règles choisies.** Ouvrir Claude Code dans ce dossier et coller, en remplaçant `<nom>` (par exemple `security` ou `posture`) :
 
 ```text
-Installe la règle security de ce dépôt : copie rules/security.md dans
-~/.claude/rules/, puis ajoute settings/security.json à mon
+Installe la règle <nom> de ce dépôt : copie rules/<nom>.md dans
+~/.claude/rules/ ; si settings/<nom>.json existe, ajoute-le à mon
 ~/.claude/settings.json en gardant tout ce qui existe (les règles deny
 à la fin de ma liste, dans le même ordre, sans doublon). Ne lis rien
 d'autre dans ~/.claude. Montre-moi les changements et attends mon oui.
 ```
 
-À la main, c'est la même chose : copier le fichier, puis reporter le contenu de `settings/security.json` dans `~/.claude/settings.json`.
+À la main, c'est la même chose : copier le fichier de `rules/`, puis reporter le contenu de `settings/<nom>.json` s'il existe.
 
-**3. Un filet pour git**, valable dans tous vos dépôts : le fichier personnel `CLAUDE.local.md` et les fichiers de secrets ne seront jamais ajoutés par erreur.
+**3. Un filet pour git** (pour la règle de sécurité), valable dans tous vos dépôts : le fichier personnel `CLAUDE.local.md` et les fichiers de secrets ne seront jamais ajoutés par erreur.
 
 ```bash
 mkdir -p ~/.config/git && printf '%s\n' 'CLAUDE.local.md' '.env' '.env.*' '!.env.example' >> ~/.config/git/ignore
@@ -34,7 +35,7 @@ Si `git config --global core.excludesFile` affiche un chemin, mettre plutôt ces
 
 **4. Redémarrer** Claude Code.
 
-Pour mettre à jour : recopier la règle et ajouter les réglages nouveaux, que le `CHANGELOG.md` signale. Pour retirer : supprimer `~/.claude/rules/security.md` et les lignes ajoutées à `~/.claude/settings.json`.
+Pour mettre à jour : recopier la règle et ajouter les réglages nouveaux, que le `CHANGELOG.md` signale. Pour retirer : supprimer `~/.claude/rules/<nom>.md` et les lignes ajoutées à `~/.claude/settings.json`.
 
 ## Dans vos projets
 
