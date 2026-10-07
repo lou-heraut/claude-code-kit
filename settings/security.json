@@ -1,0 +1,35 @@
+{
+  "disableClaudeAiConnectors": true,
+  "permissions": {
+    "disableBypassPermissionsMode": "disable",
+    "deny": [
+      "Bash(ssh *)",
+      "Bash(scp *)",
+      "Bash(sftp *)",
+      "Bash(rsync *)",
+      "Read(~/.ssh/**)",
+      "Read(//**/.env)",
+      "Read(//**/.env.[a-df-z]*)",
+      "Read(.env*)",
+      "Read(!.env.example)",
+      "Read(//**/.Renviron)",
+      "Read(~/.aws/**)",
+      "Read(~/.config/gcloud/**)",
+      "Read(~/.kube/**)",
+      "Read(~/.docker/config.json)",
+      "Read(~/.config/gh/**)",
+      "Read(~/.config/glab-cli/**)",
+      "Read(~/.config/rclone/**)",
+      "Read(~/.s3cfg)",
+      "Read(~/.mc/**)",
+      "Read(~/.git-credentials)",
+      "Read(~/.netrc)",
+      "Read(~/.pgpass)",
+      "Read(~/.pypirc)",
+      "Read(~/.npmrc)",
+      "Read(~/.gnupg/**)",
+      "Read(~/.bash_history)",
+      "Read(~/.zsh_history)"
+    ]
+  }
+}
