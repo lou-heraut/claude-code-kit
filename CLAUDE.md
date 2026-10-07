@@ -6,8 +6,13 @@ Règles courtes pour Claude Code, installées par copie dans `~/.claude/` (voir 
 
 Une règle est chargée dans le contexte de Claude à chaque session : chaque phrase oriente ce qu'il fait, y compris hors de son sujet. On l'écrit pour Claude seul ; le pourquoi destiné aux humains va dans le README.
 
-- Une phrase porte un risque ou un besoin précis, l'action concrète, et ce qu'il faut faire à la place. Une raison courte quand elle aide à appliquer la règle.
-- Dire quoi faire plutôt que quoi ne pas faire, quand c'est possible.
+Il y a deux sortes de règles :
+
+- **les limites** (`security.md`, `project.md`) : chaque phrase porte un risque ou un besoin précis, l'action concrète, et ce qu'il faut faire à la place. Une raison courte quand elle aide à l'appliquer. Dire quoi faire plutôt que quoi ne pas faire, quand c'est possible ;
+- **la posture** (`posture.md`) : une direction, pas des actes. Elle donne l'esprit dans lequel réfléchir et proposer, avec les mots du mainteneur, choisis pour l'imaginaire qu'ils portent (keep it clean, keep it simple, bloat, pérennité). Elle ne bride ni la créativité ni les propositions qui changent tout, tant qu'elles vont dans ce sens.
+
+Pour les deux :
+
 - Pas de catégorie à surveiller ni de sujet annexe : nommer un thème le rend présent partout.
 - Pas de déclencheur d'alerte vague (« signaler », « au moindre soupçon ») : seulement des cas précis.
 - Pas d'emphase : ni majuscules, ni gras d'insistance. Les modèles actuels sur-réagissent au langage appuyé (Anthropic, *Prompting best practices*).
