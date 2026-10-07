@@ -2,10 +2,10 @@
 
 Des règles courtes pour Claude Code, à installer dans `~/.claude/`, pensées pour un travail de recherche publique : simple, sobre, durable. Chaque règle est un fichier indépendant, qu'on installe ou non.
 
-| Règle | Ce qu'elle fait |
-|---|---|
-| `rules/security.md` et `settings/security.json` | pas de connexion à d'autres machines, pas de lecture de secret, annonce avant d'utiliser un accès en votre nom |
-| `rules/posture.md` | l'esprit du travail : recherche publique, robuste et pérenne, keep it clean, keep it simple |
+- `rules/security.md`, avec `settings/security.json` : pas de connexion à d'autres machines, pas de lecture de secret, annonce avant d'utiliser un accès en votre nom.
+- `rules/posture.md` : l'esprit du travail.
+- `rules/project.md` : la vie d'un projet, de l'organisation des fichiers aux versions.
+- `rules/writing.md` : la forme de ce qu'on écrit et dit.
 
 État au 7 octobre 2026, avec Claude Code 2.1.292.
 
