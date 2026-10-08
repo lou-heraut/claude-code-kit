@@ -13,7 +13,7 @@ CHANGELOG.md                     ce qui a été fait, version par version
 CLAUDE.md                        comment on travaille ici, ce qu'il ne faut pas casser
 CITATION.cff, codemeta.json      qui a fait quoi, comment citer
 docs/                            la documentation publiée, s'il y en a une
-dev/decisions.md                 ce qui a été décidé, quand et pourquoi
+dev/decisions.md                 les choix qui ont émergé, avec leur raison
 dev/references.md                les sources lues, avec les passages utiles
 dev/plans/AAAA-MM-JJ_sujet.md    le fichier de travail d'un point devenu trop lourd
 dev/audits/AAAA-MM-JJ_sujet.md   un état des lieux daté, et ce qu'il appelle
@@ -21,15 +21,15 @@ dev/audits/AAAA-MM-JJ_sujet.md   un état des lieux daté, et ce qu'il appelle
 
 La racine porte ce qu'on trouve dans tout dépôt ; `docs/` s'adresse aux utilisateurs, `dev/` à qui développe le projet.
 
-Deux fichiers naissent d'une section qui grossit : les sources commencent en fin de README, les décisions dans le `CLAUDE.md`. Une décision s'écrit avec sa date et sa raison, et se corrige ou se remplace quand elle change ; git garde l'historique.
+Les sources commencent en fin de README, puis passent dans `dev/references.md` quand elles s'accumulent. Les choix qui émergent du travail (conventions, préférences, orientations) s'écrivent quand ils compteront pour la suite, avec leur date et leur raison : quelques lignes dans le `CLAUDE.md`, puis `dev/decisions.md` quand ils s'accumulent. Ce sont des repères pour avancer, qui évoluent avec le travail ; git garde l'historique.
 
-Ce qui est utile au projet (décision, constat, ce qui reste) s'écrit dans ses fichiers, pas dans la mémoire automatique de Claude.
+Ce qui est utile au projet (un choix, un constat, ce qui reste) s'écrit dans ses fichiers, pas dans la mémoire automatique de Claude.
 
 ## Plans et audits
 
 `ROADMAP.md` est le plan du projet. Quand un de ses points se révèle bien plus lourd une fois qu'on y est, Claude ouvre un fichier de travail dans `dev/plans/`, pour suivre les sous-étapes sans perdre l'avancée ; `ROADMAP.md` y renvoie tant qu'il est en cours. Ce fichier porte son état en tête (en cours, terminé le …) et reste en place une fois terminé.
 
-Le nom des plans et des audits commence par la date, pour qu'un simple listing les range dans l'ordre. Un audit ne change plus une fois écrit : ses décisions partent dans `dev/decisions.md`, ses tâches dans `ROADMAP.md`.
+Le nom des plans et des audits commence par la date, pour qu'un simple listing les range dans l'ordre. Un audit ne change plus une fois écrit : les choix qui en sortent partent dans `dev/decisions.md`, ses tâches dans `ROADMAP.md`.
 
 ## Les versions
 
