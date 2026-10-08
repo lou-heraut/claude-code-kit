@@ -5,7 +5,7 @@ Ce qui reste à faire. Ce qui est livré part dans `CHANGELOG.md`.
 ## Prochaines étapes
 
 1. Essayer les règles et les skills sur un projet réel, et corriger d'après ce qu'on observe : un skill se juge à l'usage, dans une session neuve.
-2. Publier la version 1.0.0.
+2. Publier la version 1.0.0, en dépôt public sur GitHub, une fois l'essai fait.
 
 ## Plus tard
 

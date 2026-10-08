@@ -32,6 +32,7 @@ Les skills suivent les mêmes principes. Ils ne se lancent que sur commande (`di
 - Un secret est utilisé par les programmes, jamais lu par Claude : les interdictions `Read` ne s'appliquent pas aux sous-processus (git, ssh, script dotenv).
 - Règles `.env` : `Read(//**/.env)` et `Read(//**/.env.[a-df-z]*)` partout, puis `Read(.env*)` suivi de `Read(!.env.example)` dans le projet. Une exception `!` ne vaut que pour les règles relatives placées avant elle ; la négation entre crochets (`[!e]`) n'est pas reconnue, un intervalle l'est.
 - Installation par copie dans `~/.claude/rules/` : un plugin ne peut porter ni règle chargée à chaque session ni interdiction. Pas de script d'installation.
+- Les skills portent le préfixe `kit-` : on les retrouve en tapant `/kit`, et aucun ne peut entrer en conflit avec une commande intégrée (`/resume`, `/review`…). Ils ne se déclenchent pas seuls, parce qu'une tournure de l'utilisateur suffirait à les lancer à tort.
 
 ## Ce dépôt
 
