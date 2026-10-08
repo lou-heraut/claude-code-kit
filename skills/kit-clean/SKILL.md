@@ -1,6 +1,8 @@
 ---
 name: kit-clean
-description: Fait une passe de nettoyage sur un projet, pour remettre l'information à plat, sans doublon ni incohérence, et laisser un état stable. À utiliser quand l'utilisateur demande un nettoyage, une mise à plat, ou un état stable avant une diffusion.
+description: "Fait une passe de nettoyage sur un projet, pour remettre l'information à plat, sans doublon ni incohérence, et laisser un état stable."
+disable-model-invocation: true
+argument-hint: "[partie du projet]"
 ---
 
 Partie à nettoyer, si elle est précisée : $ARGUMENTS

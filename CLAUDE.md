@@ -23,6 +23,8 @@ Pour les deux :
 - Côté humain, tout se fait une fois, à l'installation : pas de routine, pas de liste de vérifications.
 - Chaque règle s'installe seule, sans dépendre d'une autre.
 
+Les skills suivent les mêmes principes. Ils ne se lancent que sur commande (`disable-model-invocation: true`), prennent un thème en argument, et donnent une direction avec les mots du mainteneur plutôt qu'une procédure : ce que disent déjà les règles (où vit l'information, la posture) n'y est pas répété. Une formule qui portait l'enjeu d'une session particulière n'a pas sa place dans un skill général. Les descriptions YAML se mettent entre guillemets.
+
 ## Ce qu'il ne faut pas casser
 
 - `rules/security.md` ne vise que trois risques : agir sur une autre machine, lire un secret, utiliser un accès au nom de l'utilisateur sans le dire. Git n'est pas concerné. Ne pas y ajouter de consigne sur les données personnelles, l'infrastructure ou la manière d'écrire dans un dépôt : essayé, cela rendait Claude excessivement prudent.
@@ -33,7 +35,7 @@ Pour les deux :
 
 ## Ce dépôt
 
-- Il reproduit `~/.claude/` : `rules/` y est copié, `settings/` y est fusionné.
+- Il reproduit `~/.claude/` : `rules/` et `skills/` y sont copiés, `settings/` y est fusionné.
 - Racine : `README.md` (s'en servir, pourquoi, sources), `CHANGELOG.md` (ce qui est livré), `ROADMAP.md` (ce qui reste, rien d'autre), ce fichier, `LICENSE`.
 - Français pour ce qui se lit (règles, README, commits), anglais pour les noms de fichiers et de dossiers.
 - Dépôt public : rien de personnel, aucun nom de serveur ni chemin interne.

@@ -1,6 +1,8 @@
 ---
 name: kit-end
-description: Termine une session proprement en mettant à plat, dans les fichiers du projet, le contexte acquis, pour qu'un prochain Claude puisse reprendre proprement le travail. À utiliser quand l'utilisateur veut terminer la session, vider le contexte, ou mettre le travail à l'abri avant une coupure.
+description: "Termine une session en mettant à plat, dans les fichiers du projet, le contexte acquis, pour qu'un prochain Claude puisse reprendre proprement le travail."
+disable-model-invocation: true
+argument-hint: "[thème à consigner]"
 ---
 
 Thème à consigner en priorité : $ARGUMENTS

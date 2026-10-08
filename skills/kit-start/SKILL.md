@@ -1,6 +1,8 @@
 ---
 name: kit-start
-description: Reprend le contexte d'un projet en début de session, prend du recul et fait un point d'avancement. À utiliser quand l'utilisateur demande de reprendre le contexte, de se refamiliariser avec le projet ou de faire un état des lieux (« reprends le contexte », « on en est où ? »).
+description: "Reprend le contexte d'un projet en début de session, prend du recul et fait un point d'avancement."
+disable-model-invocation: true
+argument-hint: "[thème]"
 ---
 
 Thème de la session : $ARGUMENTS

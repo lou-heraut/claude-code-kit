@@ -4,13 +4,8 @@ Ce qui reste à faire. Ce qui est livré part dans `CHANGELOG.md`.
 
 ## Prochaines étapes
 
-1. Publier la version 1.0.0 (sécurité, posture, projet, écriture).
-2. Les skills (`skills/`, copiés dans `~/.claude/skills/`), à écrire à partir des prompts de session qui ont fait leurs preuves. Le but commun : qu'un prochain Claude puisse reprendre proprement le travail.
-   - reprise : lire la structure du projet et les fichiers qui disent où il en est, dans l'ordre, avant de toucher à quoi que ce soit ;
-   - fin de session : verser dans les fichiers du projet ce que la session a appris (décisions, constats, ce qui reste), au lieu de le laisser dans la mémoire locale de Claude ;
-   - nettoyage : remettre le projet d'aplomb (une information à un seul endroit, une roadmap qui rétrécit, chaque fichier à sa place) ;
-   - audit : chercher en ligne et rassembler le contexte avant de conclure, puis écrire un `AUDIT.md` daté.
-   Noms à choisir en évitant les commandes intégrées de Claude Code (`/resume`, `/context` existent déjà).
+1. Essayer les règles et les skills sur un projet réel, et corriger d'après ce qu'on observe : un skill se juge à l'usage, dans une session neuve.
+2. Publier la version 1.0.0.
 
 ## Plus tard
 
