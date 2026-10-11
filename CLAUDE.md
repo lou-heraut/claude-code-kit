@@ -33,6 +33,7 @@ Les skills suivent les mêmes principes. Ils ne se lancent que sur commande (`di
 - Règles `.env` : `Read(//**/.env)` et `Read(//**/.env.[a-df-z]*)` partout, puis `Read(.env*)` suivi de `Read(!.env.example)` dans le projet. Une exception `!` ne vaut que pour les règles relatives placées avant elle ; la négation entre crochets (`[!e]`) n'est pas reconnue, un intervalle l'est.
 - Installation par copie dans `~/.claude/rules/` : un plugin ne peut porter ni règle chargée à chaque session ni interdiction. Pas de script d'installation.
 - `kit-start` sert la remise en contexte de Claude, et son retour se limite à l'état de la roadmap et à par quoi on reprend. Ne pas y remettre de prise de recul, de vérification de cohérence ou de point d'avancement : essayé, cela produisait au démarrage un audit de plusieurs pages, impossible à reprendre.
+- `project.md` : un fichier de travail dans `dev/plans/` se propose, Claude ne l'ouvre pas de lui-même. Essayé : il en ouvrait d'office, avant même de commencer le point, ou en fin de session pour un point seulement interrompu.
 - Les skills portent le préfixe `kit-` : on les retrouve en tapant `/kit`, et aucun ne peut entrer en conflit avec une commande intégrée (`/resume`, `/review`…). Ils ne se déclenchent pas seuls, parce qu'une tournure de l'utilisateur suffirait à les lancer à tort.
 
 ## Ce dépôt

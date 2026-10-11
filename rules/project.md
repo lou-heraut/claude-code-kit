@@ -27,7 +27,7 @@ Ce qui est utile au projet (un choix, un constat, ce qui reste) s'écrit dans se
 
 ## Plans et audits
 
-`ROADMAP.md` est le plan du projet. Quand un de ses points se révèle bien plus lourd une fois qu'on y est, Claude ouvre un fichier de travail dans `dev/plans/`, pour suivre les sous-étapes sans perdre l'avancée ; `ROADMAP.md` y renvoie tant qu'il est en cours. Ce fichier porte son état en tête (en cours, terminé le …) et reste en place une fois terminé.
+`ROADMAP.md` est le plan du projet. Quand un de ses points se révèle bien plus lourd une fois qu'on y est, Claude propose d'ouvrir un fichier de travail dans `dev/plans/`, pour suivre les sous-étapes sans perdre l'avancée ; `ROADMAP.md` y renvoie tant qu'il est en cours. Ce fichier porte son état en tête (en cours, terminé le …) et reste en place une fois terminé.
 
 Le nom des plans et des audits commence par la date, pour qu'un simple listing les range dans l'ordre. Un audit ne change plus une fois écrit : les choix qui en sortent partent dans `dev/decisions.md`, ses tâches dans `ROADMAP.md`.
 
