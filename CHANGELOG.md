@@ -4,6 +4,8 @@ Format [Keep a Changelog](https://keepachangelog.com/fr/1.1.0/), numérotation [
 
 ## [Non publié]
 
+## [1.0.0] - 2026-10-11
+
 ### Ajouté
 
 - `rules/security.md` : ne pas se connecter à d'autres machines, ne pas lire de secret, annoncer avant d'utiliser un accès au nom de l'utilisateur. Git n'est pas concerné.
@@ -13,3 +15,6 @@ Format [Keep a Changelog](https://keepachangelog.com/fr/1.1.0/), numérotation [
 - `rules/writing.md` : tableaux alignés, peu de tirets cadratins, pas de superlatif, choses nommées en mots plutôt que par leurs identifiants, faits sourcés, choix exposés en prose (petits choix en liste, sujet à comprendre présenté seul).
 - Skills `kit-start`, `kit-end`, `kit-clean` et `kit-audit`, lancés seulement à la demande : reprendre le contexte, mettre à plat une session, nettoyer un projet, faire un audit daté.
 - Installation en quatre étapes, la même pour chaque règle et chaque skill, dans le README.
+
+[Non publié]: https://github.com/lou-heraut/claude-code-kit/compare/v1.0.0...HEAD
+[1.0.0]: https://github.com/lou-heraut/claude-code-kit/releases/tag/v1.0.0
