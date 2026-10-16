@@ -4,6 +4,10 @@ Format [Keep a Changelog](https://keepachangelog.com/fr/1.1.0/), numérotation [
 
 ## [Non publié]
 
+### Ajouté
+
+- `rules/off-limits.md`, avec `settings/off-limits.json` : ce dont le nom contient `private` ou `privé`, fichier ou dossier, Claude ne le lit pas ; la lecture en est interdite sous le dossier personnel. Le filet git de l'installation ignore les dossiers `private/`.
+
 ## [1.0.0] - 2026-10-11
 
 ### Ajouté

@@ -1,0 +1,8 @@
+{
+  "permissions": {
+    "deny": [
+      "Read(~/**/*private*)",
+      "Read(~/**/*privé*)"
+    ]
+  }
+}

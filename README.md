@@ -5,6 +5,7 @@ Des règles courtes et quatre skills pour Claude Code, à installer dans `~/.cla
 Les règles, chargées à chaque session :
 
 - `rules/security.md`, avec `settings/security.json` : pas de connexion à d'autres machines, pas de lecture de secret, annonce avant d'utiliser un accès en votre nom.
+- `rules/off-limits.md`, avec `settings/off-limits.json` : ce dont le nom contient `private` ou `privé`, fichier ou dossier, Claude ne le lit pas.
 - `rules/posture.md` : l'esprit du travail.
 - `rules/project.md` : la vie d'un projet, de l'organisation des fichiers aux versions.
 - `rules/writing.md` : la forme de ce qu'on écrit et dit.
@@ -40,10 +41,10 @@ Les skills se copient tels quels, depuis votre terminal :
 mkdir -p ~/.claude/skills && cp -r skills/kit-* ~/.claude/skills/
 ```
 
-**3. Un filet pour git** (pour la règle de sécurité), valable dans tous vos dépôts : le fichier personnel `CLAUDE.local.md` et les fichiers de secrets ne seront jamais ajoutés par erreur.
+**3. Un filet pour git** (pour les règles `security` et `off-limits`), valable dans tous vos dépôts : le fichier personnel `CLAUDE.local.md`, les fichiers de secrets et les dossiers `private/` ne seront jamais ajoutés par erreur.
 
 ```bash
-mkdir -p ~/.config/git && printf '%s\n' 'CLAUDE.local.md' '.env' '.env.*' '!.env.example' >> ~/.config/git/ignore
+mkdir -p ~/.config/git && printf '%s\n' 'CLAUDE.local.md' '.env' '.env.*' '!.env.example' 'private/' >> ~/.config/git/ignore
 ```
 
 Si `git config --global core.excludesFile` affiche un chemin, mettre plutôt ces lignes dans ce fichier-là.
@@ -79,6 +80,8 @@ Deux conventions suffisent pour que la règle de sécurité fonctionne :
     Les écritures restent à annoncer.
   ```
 
+Avec la règle `off-limits`, ce que Claude ne doit pas lire porte `private` ou `privé` dans son nom, fichier ou dossier, n'importe où sous votre dossier personnel : par exemple un dossier `private/` pour la partie réservée d'un corpus, ou `notes_privées.md`. Vos programmes s'en servent, Claude n'en lit pas le contenu ; les noms restent visibles.
+
 ## Pourquoi ces règles
 
 Claude Code agit avec votre compte : il lit vos fichiers, lance des commandes, utilise vos clés SSH et vos accès réseau. Il n'est pas cloisonné au dossier du projet, et tout ce qu'il lit part chez le fournisseur.
@@ -86,13 +89,18 @@ Claude Code agit avec votre compte : il lit vos fichiers, lance des commandes, u
 Valider chaque action à la main ne protège pas : les utilisateurs acceptaient 93 % des demandes. Le mode auto, où un second modèle (le classifieur) relit les actions risquées, est devenu le mode par défaut. Il laisse passer environ une action excessive sur six, mais il reste plus attentif qu'une validation par réflexe. La règle de sécurité ne cherche pas à le remplacer : elle pose des limites nettes là où une erreur coûte cher, et laisse le reste au jugement de Claude.
 
 - **Les autres machines.** Claude ne se connecte à aucune autre machine : il prépare les commandes, vous les lancez. Une erreur sur un serveur de production coûte trop cher pour être laissée au classifieur.
-- **Les secrets.** Un secret est utilisé par le programme qui le charge (git, un script avec dotenv), jamais lu par Claude. Les interdictions de lecture ne s'appliquent qu'aux outils de Claude, pas aux programmes qu'il lance : c'est ce qui rend la règle praticable.
+- **Les secrets.** Un secret est utilisé par le programme qui le charge (git, un script avec dotenv), jamais lu par Claude. Les interdictions de lecture couvrent les outils de Claude et les commandes de lecture qu'il tape (`cat`, `head`…), pas les programmes qu'il lance : c'est ce qui rend la règle praticable.
+- **Ce qui est privé** (règle `off-limits`). Ce qui n'est pas un secret mais ne doit pas entrer dans la conversation porte `private` ou `privé` dans son nom, sur le même principe : les programmes s'en servent, Claude ne le lit pas.
 - **Les accès en votre nom.** Un jeton chargé par un script permet d'agir sur un service externe sans voir le secret. L'action part quand même en votre nom : Claude l'annonce et attend votre oui.
 - **Les réglages** désactivent aussi les connecteurs claude.ai (accès large à des contenus privés, non testés ici) et le mode « tout accepter » (il retire le classifieur).
 
 Ces interdictions filtrent la façon dont Claude écrit ses commandes : ce ne sont pas des murs, et une commande écrite autrement passe encore devant le classifieur. Pour un vrai mur, il faut la sandbox de Claude Code ou un conteneur.
 
-Deux détails des réglages, vérifiés sur un poste : les variantes de `.env` sont bloquées partout par `.env.[a-df-z]*` (toute extension qui ne commence pas par « e »), ce qui laisse lisible `.env.example` ; l'exception `!.env.example` ne s'applique qu'aux règles relatives placées avant elle, d'où l'ordre de la liste.
+Quelques détails des réglages, vérifiés sur un poste :
+
+- les variantes de `.env` sont bloquées partout par `.env.[a-df-z]*` (toute extension qui ne commence pas par « e »), ce qui laisse lisible `.env.example` ;
+- l'exception `!.env.example` ne s'applique qu'aux règles relatives placées avant elle, d'où l'ordre de la liste ;
+- `private` et `privé` sont bloqués dans les noms sous le dossier personnel, quelle que soit la casse, et pas au-delà : sur macOS, `/tmp` et `/var` mènent à `/private/…`. Revers : un fichier de code comme `PrivateRoute.tsx` devient illisible pour Claude, qui le dit. Une recherche lancée au-dessus (`grep -r`) et un script passent encore l'interdiction : c'est la règle qui demande à Claude de les exclure (vérifié le 17 octobre 2026, Claude Code 2.1.302).
 
 ## Ce qui reste à vous
 
