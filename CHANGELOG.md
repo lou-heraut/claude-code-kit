@@ -8,6 +8,10 @@ Format [Keep a Changelog](https://keepachangelog.com/fr/1.1.0/), numérotation [
 
 - `rules/off-limits.md`, avec `settings/off-limits.json` : ce dont le nom contient `private` ou `privé`, fichier ou dossier, Claude ne le lit pas ; la lecture en est interdite sous le dossier personnel. Le filet git de l'installation ignore les dossiers `private/`.
 
+### Modifié
+
+- `settings/security.json` : bloque aussi les copies qu'Emacs laisse à côté d'un `.env` (`.env~`, `#.env#`). Pour une installation existante, ajouter `Read(//**/.env~)` et `Read(//**/#.env*#)` après `Read(//**/.env.[a-df-z]*)`.
+
 ## [1.0.0] - 2026-10-11
 
 ### Ajouté
