@@ -80,7 +80,7 @@ Deux conventions suffisent pour que la règle de sécurité fonctionne :
     Les écritures restent à annoncer.
   ```
 
-Avec la règle `off-limits`, ce que Claude ne doit pas lire porte `private` ou `privé` dans son nom, fichier ou dossier, n'importe où sous votre dossier personnel : par exemple un dossier `private/` pour la partie réservée d'un corpus, ou `notes_privées.md`. Vos programmes s'en servent, Claude n'en lit pas le contenu ; les noms restent visibles.
+Avec la règle `off-limits`, ce que Claude ne doit pas lire porte `private` ou `privé` dans son nom, fichier ou dossier, n'importe où sous votre dossier personnel : par exemple un dossier `private/` pour la partie réservée d'un corpus, ou `notes_privées.md`. Vos programmes s'en servent, Claude n'en lit pas le contenu ; les noms restent visibles. Devant un nom qui s'en approche (`prive` sans accent, une faute de frappe), Claude demande avant de lire ; les mots de la même famille, comme `privacy`, restent lisibles.
 
 ## Pourquoi ces règles
 

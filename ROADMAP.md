@@ -4,7 +4,7 @@ Ce qui reste à faire. Ce qui est livré part dans `CHANGELOG.md`.
 
 ## Prochaines étapes
 
-1. Observer `off-limits` à l'usage : la phrase sur les noms qui ressemblent à private (variante, faute de frappe) rend-elle Claude trop prudent ? Le motif accentué (`*privé*`) n'a pas été vérifié sur macOS.
+1. Vérifier sur macOS le motif accentué de `off-limits` (`*privé*`).
 
 ## Plus tard
 
