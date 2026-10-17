@@ -2,10 +2,6 @@
 
 Ce qui reste à faire. Ce qui est livré part dans `CHANGELOG.md`.
 
-## Prochaines étapes
-
-1. Vérifier sur macOS le motif accentué de `off-limits` (`*privé*`).
-
 ## Plus tard
 
 - Règles optionnelles, que chacun installe ou non, par exemple un détecteur de secrets avant commit. Deux voies, chacune avec un défaut : l'imposer (il contrôlerait Claude) ou le proposer (un outil tiers à installer).
