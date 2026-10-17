@@ -4,6 +4,8 @@ Format [Keep a Changelog](https://keepachangelog.com/fr/1.1.0/), numérotation [
 
 ## [Non publié]
 
+## [1.1.0] - 2026-10-17
+
 ### Ajouté
 
 - `rules/off-limits.md`, avec `settings/off-limits.json` : ce dont le nom contient `private` ou `privé`, fichier ou dossier, Claude ne le lit pas ; pour une variante proche (`prive` sans accent, une faute de frappe), il demande. La lecture en est interdite sous le dossier personnel. Le filet git de l'installation ignore les dossiers `private/`.
@@ -24,5 +26,6 @@ Format [Keep a Changelog](https://keepachangelog.com/fr/1.1.0/), numérotation [
 - Skills `kit-start`, `kit-end`, `kit-clean` et `kit-audit`, lancés seulement à la demande : reprendre le contexte, mettre à plat une session, nettoyer un projet, faire un audit daté.
 - Installation en quatre étapes, la même pour chaque règle et chaque skill, dans le README.
 
-[Non publié]: https://github.com/lou-heraut/claude-code-kit/compare/v1.0.0...HEAD
+[Non publié]: https://github.com/lou-heraut/claude-code-kit/compare/v1.1.0...HEAD
+[1.1.0]: https://github.com/lou-heraut/claude-code-kit/releases/tag/v1.1.0
 [1.0.0]: https://github.com/lou-heraut/claude-code-kit/releases/tag/v1.0.0
