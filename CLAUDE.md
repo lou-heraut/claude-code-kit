@@ -45,5 +45,6 @@ Les skills suivent les mêmes principes. Ils ne se lancent que sur commande (`di
 - Dépôt public : rien de personnel, aucun nom de serveur ni chemin interne.
 - Un fait sur Claude Code vient de la documentation officielle, liée dans le README ; noter la version de Claude Code (`claude --version`) quand on le revérifie.
 - Vérifier un réglage dans une session séparée (`claude -p --settings <fichier>`) sur des fichiers factices : la session en cours ne relit plus un fichier de réglages dont le dossier a été supprimé puis recréé.
+- Essayer une formulation de règle sans toucher à la copie installée : la poser en règle de projet (`.claude/rules/`) dans un projet factice, et écarter la copie installée par `claudeMdExcludes` dans le fichier passé à `--settings`. Plusieurs sessions par version, en `--output-format stream-json --verbose`, pour voir quels fichiers Claude ouvre.
 - Écrire « INRAE » sans article. Pas de tiret cadratin.
 - Ce qui change pour l'utilisateur va dans `CHANGELOG.md`, sous « Non publié ».
