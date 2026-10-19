@@ -44,6 +44,7 @@ Les skills suivent les mêmes principes. Ils ne se lancent que sur commande (`di
 - Racine : `README.md` (s'en servir, pourquoi, sources), `CHANGELOG.md` (ce qui est livré), `ROADMAP.md` (ce qui reste, rien d'autre), ce fichier, `LICENSE`.
 - Français pour ce qui se lit (règles, README, commits), anglais pour les noms de fichiers et de dossiers.
 - Dépôt public : rien de personnel, aucun nom de serveur ni chemin interne.
+- En début de session, avant de toucher à une règle ou un skill, relire la documentation officielle et les conseils d'Anthropic liés dans le README, et l'index de la documentation (https://code.claude.com/docs/llms.txt) pour repérer les pages nouvelles : ils changent avec les versions de Claude Code et les modèles. En dire en quelques lignes ce qui est nouveau ou contredit le dépôt.
 - Un fait sur Claude Code vient de la documentation officielle, liée dans le README ; noter la version de Claude Code (`claude --version`) quand on le revérifie.
 - Vérifier un réglage dans une session séparée (`claude -p --settings <fichier>`) sur des fichiers factices : la session en cours ne relit plus un fichier de réglages dont le dossier a été supprimé puis recréé.
 - Essayer une formulation de règle sans toucher à la copie installée : la poser en règle de projet (`.claude/rules/`) dans un projet factice, et écarter la copie installée par `claudeMdExcludes` dans le fichier passé à `--settings`. Plusieurs sessions par version, en `--output-format stream-json --verbose`, pour voir quels fichiers Claude ouvre.
