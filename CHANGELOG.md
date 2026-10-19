@@ -4,6 +4,10 @@ Format [Keep a Changelog](https://keepachangelog.com/fr/1.1.0/), numérotation [
 
 ## [Non publié]
 
+### Modifié
+
+- `rules/project.md` : `dev/decisions.md` porte des repères que Claude tient lui-même pour le prochain Claude (ce qu'il déferait ou referait sinon, avec sa raison) et qu'il change quand ils ne tiennent plus ; il demande seulement quand il doute. Les choix nés d'un audit n'y partent plus d'office.
+
 ## [1.1.0] - 2026-10-17
 
 ### Ajouté
