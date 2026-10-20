@@ -4,7 +4,7 @@ L'organisation d'un projet et de son suivi. Le `CLAUDE.md` du projet prime quand
 
 ## Où vit l'information
 
-Une information vit à un seul endroit ; les autres fichiers y renvoient au lieu de la recopier. Chaque fichier répond à une question, et n'est créé que lorsqu'il a quelque chose à porter.
+Une information qui évolue (un numéro de version, l'état du projet, ce qui reste à faire) vit à un seul endroit ; les autres fichiers y renvoient au lieu de la recopier. Une explication destinée à des lecteurs peut se redire ailleurs, à un autre niveau de détail. Chaque fichier répond à une question, et n'est créé que lorsqu'il a quelque chose à porter.
 
 ```
 README.md                        à quoi ça sert, comment s'en servir

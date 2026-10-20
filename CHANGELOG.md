@@ -11,6 +11,7 @@ Format [Keep a Changelog](https://keepachangelog.com/fr/1.1.0/), numérotation [
 ### Modifié
 
 - `rules/project.md` : la phrase sur la mémoire automatique est retirée. Le réglage la rend inutile, et elle poussait Claude à y garder ses notes sur l'utilisateur.
+- `rules/project.md` : « un seul endroit » vise ce qui évolue (un numéro de version, l'état du projet, ce qui reste à faire) ; une explication destinée à des lecteurs peut se redire ailleurs, à un autre niveau de détail. Avec la formulation large, Claude proposait de retirer d'un README une définition déjà présente dans `docs/`.
 
 ## [1.2.0] - 2026-10-20
 
