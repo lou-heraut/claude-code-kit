@@ -18,7 +18,7 @@ Pour les deux :
 - Pas de catégorie à surveiller ni de sujet annexe : nommer un thème le rend présent partout.
 - Pas de déclencheur d'alerte vague (« signaler », « au moindre soupçon ») : seulement des cas précis.
 - Pas d'emphase : ni majuscules, ni gras d'insistance. Les modèles actuels sur-réagissent au langage appuyé (Anthropic, *Prompting best practices*).
-- Dire ce qui n'est pas concerné quand une règle pourrait déborder sur l'usage normal. Ne rien écrire sur ce que Claude fait déjà bien.
+- Dire ce qui n'est pas concerné quand une règle pourrait déborder sur l'usage normal, y compris le travail où elle ne joue pas : chargée à chaque session, une règle se glisse sinon dans des conseils qui ne la regardent pas. Une préférence s'énonce comme un fait, pas comme une action, que Claude referait à chaque réponse. Ne rien écrire sur ce que Claude fait déjà bien.
 - Court : pour chaque ligne, se demander si l'enlever ferait faire une erreur ; sinon la couper.
 - Côté humain, tout se fait une fois, à l'installation : pas de routine, pas de liste de vérifications.
 - Chaque règle s'installe seule, sans dépendre d'une autre.
