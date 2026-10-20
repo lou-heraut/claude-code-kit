@@ -23,8 +23,6 @@ La racine porte ce qu'on trouve dans tout dépôt ; `docs/` s'adresse aux utilis
 
 Les sources commencent en fin de README, puis passent dans `dev/references.md` quand elles s'accumulent. Les choix qui se construisent ensemble au fil du travail s'écrivent pour servir au prochain Claude : ce qu'il déferait ou referait sinon, avec sa date et sa raison. Quelques lignes dans le `CLAUDE.md`, puis `dev/decisions.md` quand ils s'accumulent. Claude les tient lui-même : il écrit quand il est sûr, demande quand il doute. Ce sont des repères qu'on suit tant qu'ils servent ; leur raison dit quand l'un d'eux ne tient plus, et Claude le change ou le retire, en le disant. git garde l'historique.
 
-Ce qui est utile au projet (un choix, un constat, ce qui reste) s'écrit dans ses fichiers, pas dans la mémoire automatique de Claude.
-
 ## Plans et audits
 
 `ROADMAP.md` est le plan du projet. Quand un de ses points se révèle bien plus lourd une fois qu'on y est, Claude propose d'ouvrir un fichier de travail dans `dev/plans/`, pour suivre les sous-étapes sans perdre l'avancée ; `ROADMAP.md` y renvoie tant qu'il est en cours. Ce fichier porte son état en tête (en cours, terminé le …) et reste en place une fois terminé.

@@ -4,8 +4,12 @@ Ce qui reste à faire. Ce qui est livré part dans `CHANGELOG.md`.
 
 ## À reprendre
 
-1. Mémoire automatique de Claude Code : la couper (réglage du poste) ou la relire régulièrement. Elle porte d'une session à l'autre un cadre tiré d'un recadrage : une prudence excessive après une remarque de l'utilisateur (8 octobre 2026), puis trois notes de conduite écrites en une session (19 octobre : tenir un critère de risque proportionné, être franc plutôt que lisse, tirer d'une correction une direction générale plutôt que le cas). Leur fond rejoint parfois le kit : voir s'il a sa place dans une règle.
-2. Observer à l'usage les changements de la 1.2.0 : avec les repères de `project.md`, Claude écrit-il encore des choix comme des règles, demande-t-il trop souvent ? Avec `off-limits`, parle-t-il encore de la règle hors des lectures ?
+1. Ce que les notes de mémoire automatique ont appris (relues le 20 octobre 2026), à essayer en session avant de l'écrire :
+   - `project.md` : « une information vit à un seul endroit » vise ce qui change (un numéro de version, un décompte, un état), pas la prose écrite pour des lecteurs, qui peut redire à son niveau de détail. Lue au sens large, une consigne de ce genre a fait supprimer trois fois des textes utiles dans un projet.
+   - `posture.md` : mesurer plutôt que croire. Prendre la source entière plutôt qu'un sondage, regarder ce qu'un service fait plutôt que ce que dit sa documentation, chercher la cause plutôt qu'un contournement. Cinq notes dans trois projets ; `writing.md` n'en couvre que le sourçage.
+   - `posture.md` : la franchise, dire nettement ce qui ne va pas sans lisser ; et la part entre trancher et montrer d'abord, que les notes tiraient en sens contraires (décider seul, attendre le go).
+2. `project.md` (section « Les sessions ») et `kit-end` : Claude propose trop souvent de vider le contexte, alors qu'une longue session qui marche bien vaut plus qu'une reprise. Le proposer quand le travail devient brouillon, qu'on se perd dans un désaccord, ou que les sujets accumulés diluent la précision ; la longueur seule ne suffit pas.
+3. Observer à l'usage les changements de la 1.2.0 : avec les repères de `project.md`, Claude écrit-il encore des choix comme des règles, demande-t-il trop souvent ? Avec `off-limits`, parle-t-il encore de la règle hors des lectures ?
 
 ## Plus tard
 

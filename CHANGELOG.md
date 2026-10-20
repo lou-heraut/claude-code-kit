@@ -4,6 +4,14 @@ Format [Keep a Changelog](https://keepachangelog.com/fr/1.1.0/), numérotation [
 
 ## [Non publié]
 
+### Ajouté
+
+- `settings/project.json`, avec la règle `project` : coupe la mémoire automatique de Claude Code (`"autoMemoryEnabled": false`). Pour une installation existante, ajouter cette ligne à `~/.claude/settings.json`. Les notes déjà écrites restent dans `~/.claude/projects/<projet>/memory/` : les relire une fois, reporter ce qui sert dans des fichiers visibles, puis supprimer ces dossiers.
+
+### Modifié
+
+- `rules/project.md` : la phrase sur la mémoire automatique est retirée. Le réglage la rend inutile, et elle poussait Claude à y garder ses notes sur l'utilisateur.
+
 ## [1.2.0] - 2026-10-20
 
 ### Modifié

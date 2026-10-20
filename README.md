@@ -7,7 +7,7 @@ Les règles, chargées à chaque session :
 - `rules/security.md`, avec `settings/security.json` : pas de connexion à d'autres machines, pas de lecture de secret, annonce avant d'utiliser un accès en votre nom.
 - `rules/off-limits.md`, avec `settings/off-limits.json` : ce dont le nom contient `private` ou `privé`, fichier ou dossier, Claude ne le lit pas.
 - `rules/posture.md` : l'esprit du travail.
-- `rules/project.md` : la vie d'un projet, de l'organisation des fichiers aux versions.
+- `rules/project.md`, avec `settings/project.json` : la vie d'un projet, de l'organisation des fichiers aux versions ; la mémoire automatique de Claude est coupée.
 - `rules/writing.md` : la forme de ce qu'on écrit et dit.
 
 Les skills, lancés à la demande :
@@ -79,6 +79,8 @@ Deux conventions suffisent pour que la règle de sécurité fonctionne :
   - Lecture de l'API <service> avec le jeton `API_TOKEN` du `.env`.
     Les écritures restent à annoncer.
   ```
+
+Avec la règle `project`, ce qui sert au travail s'écrit dans les fichiers du projet, que git garde et que chacun peut relire, et la mémoire automatique de Claude Code est coupée. Activée par défaut, elle range dans `~/.claude/projects/<projet>/memory/` des notes que Claude écrit seul, rechargées à chaque session et jamais nettoyées. Relue sur un poste après trois mois (55 notes dans 16 projets, le 20 octobre 2026), elle recopiait l'état des projets en plus ancien, réapprenait dans chaque projet les mêmes préférences, et gardait de chaque recadrage une consigne qui contredisait parfois les règles. Une préférence personnelle va dans `~/.claude/CLAUDE.md` ; une note propre à un dossier où l'on ne committe rien, dans son `CLAUDE.local.md`. Si vous aviez déjà des notes, les relire une fois, reporter ce qui sert, puis supprimer ces dossiers : coupée, la mémoire n'est plus chargée, mais les fichiers restent sur le disque.
 
 Avec la règle `off-limits`, ce que Claude ne doit pas lire porte `private` ou `privé` dans son nom, fichier ou dossier, n'importe où sous votre dossier personnel : par exemple un dossier `private/` pour la partie réservée d'un corpus, ou `notes_privées.md`. Vos programmes s'en servent, Claude n'en lit pas le contenu ; les noms restent visibles (sauf dans la liste d'un dossier que vous mentionnez avec `@`, d'où Claude Code les retire depuis la version 2.1.290). Devant un nom qui s'en approche (`prive` sans accent, une faute de frappe), Claude demande avant de lire ; les mots de la même famille, comme `privacy`, restent lisibles. Pour le reste, Claude travaille comme si la règle n'existait pas : il ne commente pas vos choix de noms, et un dossier que vous nommez `private` lui reste fermé, même si vous attendiez son aide dessus.
 
