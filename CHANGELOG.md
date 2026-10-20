@@ -6,6 +6,8 @@ Format [Keep a Changelog](https://keepachangelog.com/fr/1.1.0/), numérotation [
 
 ### Modifié
 
+- `rules/off-limits.md` : la règle ne joue qu'au moment de lire ; conseils, organisation et choix des noms se font comme si elle n'existait pas. Seules les recherches dans le contenu excluent ces fichiers, et les noms restent visibles. Sans ces précisions, Claude mettait en garde contre le nom `private` quand personne n'en proposait.
+
 - `rules/project.md` : `dev/decisions.md` porte des repères que Claude tient lui-même pour le prochain Claude (ce qu'il déferait ou referait sinon, avec sa raison) et qu'il change quand ils ne tiennent plus ; il demande seulement quand il doute. Les choix nés d'un audit n'y partent plus d'office.
 
 ## [1.1.0] - 2026-10-17
