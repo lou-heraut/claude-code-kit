@@ -4,10 +4,11 @@ Format [Keep a Changelog](https://keepachangelog.com/fr/1.1.0/), numérotation [
 
 ## [Non publié]
 
+## [1.2.0] - 2026-10-20
+
 ### Modifié
 
 - `rules/off-limits.md` : la règle ne joue qu'au moment de lire ; conseils, organisation et choix des noms se font comme si elle n'existait pas. Seules les recherches dans le contenu excluent ces fichiers, et les noms restent visibles. Sans ces précisions, Claude mettait en garde contre le nom `private` quand personne n'en proposait.
-
 - `rules/project.md` : `dev/decisions.md` porte des repères que Claude tient lui-même pour le prochain Claude (ce qu'il déferait ou referait sinon, avec sa raison) et qu'il change quand ils ne tiennent plus ; il demande seulement quand il doute. Les choix nés d'un audit n'y partent plus d'office.
 
 ## [1.1.0] - 2026-10-17
@@ -32,6 +33,7 @@ Format [Keep a Changelog](https://keepachangelog.com/fr/1.1.0/), numérotation [
 - Skills `kit-start`, `kit-end`, `kit-clean` et `kit-audit`, lancés seulement à la demande : reprendre le contexte, mettre à plat une session, nettoyer un projet, faire un audit daté.
 - Installation en quatre étapes, la même pour chaque règle et chaque skill, dans le README.
 
-[Non publié]: https://github.com/lou-heraut/claude-code-kit/compare/v1.1.0...HEAD
+[Non publié]: https://github.com/lou-heraut/claude-code-kit/compare/v1.2.0...HEAD
+[1.2.0]: https://github.com/lou-heraut/claude-code-kit/releases/tag/v1.2.0
 [1.1.0]: https://github.com/lou-heraut/claude-code-kit/releases/tag/v1.1.0
 [1.0.0]: https://github.com/lou-heraut/claude-code-kit/releases/tag/v1.0.0
