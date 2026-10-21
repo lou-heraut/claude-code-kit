@@ -44,7 +44,7 @@ mkdir -p ~/.claude/skills && cp -r skills/kit-* ~/.claude/skills/
 **3. Un filet pour git** (pour les règles `security` et `off-limits`), valable dans tous vos dépôts : le fichier personnel `CLAUDE.local.md`, les fichiers de secrets et les dossiers `private/` ne seront jamais ajoutés par erreur.
 
 ```bash
-mkdir -p ~/.config/git && printf '%s\n' 'CLAUDE.local.md' '.env' '.env.*' '!.env.example' 'private/' >> ~/.config/git/ignore
+mkdir -p ~/.config/git && printf '%s\n' 'CLAUDE.local.md' '.env' '.env.*' '.env-*' '!.env.example' 'private/' >> ~/.config/git/ignore
 ```
 
 Si `git config --global core.excludesFile` affiche un chemin, mettre plutôt ces lignes dans ce fichier-là.
@@ -100,7 +100,7 @@ Ces interdictions filtrent la façon dont Claude écrit ses commandes : ce ne so
 
 Quelques détails des réglages, vérifiés sur un poste :
 
-- les variantes de `.env` sont bloquées partout par `.env.[a-df-z]*` (toute extension qui ne commence pas par « e »), ce qui laisse lisible `.env.example` ;
+- les variantes de `.env` sont bloquées partout par `.env.[a-df-z]*` (toute extension qui ne commence pas par « e »), ce qui laisse lisible `.env.example`, et par `.env-*` pour les fichiers à tiret, un par instance comme `.env-demo`, avec leurs sauvegardes (vérifié le 22 octobre 2026, Claude Code 2.1.307) ;
 - les copies qu'Emacs laisse à côté d'un `.env` sont bloquées aussi : la sauvegarde `.env~` et l'auto-sauvegarde `#.env#` (vérifié le 17 octobre 2026, Claude Code 2.1.302) ;
 - l'exception `!.env.example` ne s'applique qu'aux règles relatives placées avant elle, d'où l'ordre de la liste ;
 - `private` et `privé` sont bloqués dans les noms sous le dossier personnel, quelle que soit la casse, et pas au-delà : sur macOS, `/tmp` et `/var` mènent à `/private/…` (le motif accentué n'y a pas été vérifié). Revers : un fichier de code comme `PrivateRoute.tsx` devient illisible pour Claude, qui le dit. Une recherche lancée au-dessus (`grep -r`) et un script passent encore l'interdiction : c'est la règle qui demande à Claude de les exclure (vérifié le 17 octobre 2026, Claude Code 2.1.302).

@@ -12,6 +12,7 @@ Format [Keep a Changelog](https://keepachangelog.com/fr/1.1.0/), numérotation [
 
 - `rules/project.md` : la phrase sur la mémoire automatique est retirée. Le réglage la rend inutile, et elle poussait Claude à y garder ses notes sur l'utilisateur.
 - `rules/project.md` : « un seul endroit » vise ce qui évolue (un numéro de version, l'état du projet, ce qui reste à faire) ; une explication destinée à des lecteurs peut se redire ailleurs, à un autre niveau de détail. Avec la formulation large, Claude proposait de retirer d'un README une définition déjà présente dans `docs/`.
+- `settings/security.json` : bloque aussi partout les fichiers d'environnement à tiret, un par instance (`.env-demo`) ; jusqu'ici, seuls ceux du projet ouvert l'étaient. Pour une installation existante, ajouter `Read(//**/.env-*)` après `Read(//**/.env.[a-df-z]*)`, et la ligne `.env-*` au filet git (étape 3 de l'installation).
 
 ## [1.2.0] - 2026-10-20
 

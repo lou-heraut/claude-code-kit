@@ -10,6 +10,7 @@
       "Read(~/.ssh/**)",
       "Read(//**/.env)",
       "Read(//**/.env.[a-df-z]*)",
+      "Read(//**/.env-*)",
       "Read(//**/.env~)",
       "Read(//**/#.env*#)",
       "Read(.env*)",
