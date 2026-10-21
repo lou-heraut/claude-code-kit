@@ -1,6 +1,6 @@
 # claude-code-kit
 
-Des règles courtes et quatre skills pour Claude Code, à installer dans `~/.claude/`, pensés pour un travail de recherche publique : simple, sobre, durable. Chaque fichier est indépendant, on l'installe ou non.
+Des règles courtes et cinq skills pour Claude Code, à installer dans `~/.claude/`, pensés pour un travail de recherche publique : simple, sobre, durable. Chaque fichier est indépendant, on l'installe ou non.
 
 Les règles, chargées à chaque session :
 
@@ -16,6 +16,7 @@ Les skills, lancés à la demande :
 - `/kit-end` : terminer une session en mettant à plat ce qu'elle a apporté.
 - `/kit-clean` : une passe de nettoyage sur le projet.
 - `/kit-audit` : un état des lieux daté, avec recherche de ce qui se fait ailleurs.
+- `/kit-worktime` : le temps passé avec Claude sur les derniers jours, en frise et en tableau à reporter dans un emploi du temps.
 
 État au 7 octobre 2026, avec Claude Code 2.1.292.
 
@@ -61,9 +62,12 @@ Ils ne se lancent que si vous tapez la commande, en début ou en fin de session,
 /kit-start la question des suffixes
 /kit-end ce qu'on a décidé sur le format de sortie
 /kit-audit sécurité du déploiement, rapide
+/kit-worktime 2
 ```
 
 Ils servent un même but : qu'un prochain Claude puisse reprendre proprement le travail. Une session neuve, partie des fichiers du projet, travaille mieux qu'une longue session chargée ; encore faut-il que ce qui compte soit écrit dans le projet, et non dans la mémoire de la session.
+
+`kit-worktime` sert autre chose : remplir un emploi du temps. Il prend le nombre de jours à résumer, aujourd'hui compris (1 par défaut, 2 pour hier et aujourd'hui). Son script lit dans l'historique local des sessions (`~/.claude/projects/`) l'heure des messages, le dossier et le titre de chaque session, jamais leur contenu, et saute les dossiers dont le nom contient `private` ou `privé`. Une plage de travail se ferme après une heure sans message, que le message vienne de vous ou de Claude. Quand des sessions de plusieurs projets tournent en même temps, le tableau réunit ce temps en un paquet par projet, au prorata de l'activité de chacun, pour que les durées s'additionnent sans compter deux fois les mêmes minutes ; la frise, elle, montre ce qui s'est passé. Le format de l'historique est interne à Claude Code et peut changer à chaque version (vérifié le 22 octobre 2026, Claude Code 2.1.307), et Claude Code ne le garde que 30 jours par défaut.
 
 Pour les adapter à un projet, écrire dans ses fichiers ce qu'ils doivent savoir (par exemple les standards à surveiller dans `dev/references.md`) plutôt que de modifier le skill. Un skill propre à un projet se crée dans `.claude/skills/` sous un autre nom : à nom égal, le skill personnel l'emporte.
 
@@ -112,7 +116,7 @@ Quelques détails des réglages, vérifiés sur un poste :
 
 ## Sources
 
-- Documentation de Claude Code : [permissions](https://code.claude.com/docs/en/permissions), [modes de permission](https://code.claude.com/docs/en/permission-modes), [mode auto](https://code.claude.com/docs/en/auto-mode-config), [CLAUDE.md et règles](https://code.claude.com/docs/en/memory), [réglages](https://code.claude.com/docs/en/settings), [connecteurs](https://code.claude.com/docs/en/mcp), [données](https://code.claude.com/docs/en/data-usage), [sandbox](https://code.claude.com/docs/en/sandboxing), [bonnes pratiques](https://code.claude.com/docs/en/best-practices).
+- Documentation de Claude Code : [permissions](https://code.claude.com/docs/en/permissions), [modes de permission](https://code.claude.com/docs/en/permission-modes), [mode auto](https://code.claude.com/docs/en/auto-mode-config), [CLAUDE.md et règles](https://code.claude.com/docs/en/memory), [réglages](https://code.claude.com/docs/en/settings), [connecteurs](https://code.claude.com/docs/en/mcp), [données](https://code.claude.com/docs/en/data-usage), [sandbox](https://code.claude.com/docs/en/sandboxing), [bonnes pratiques](https://code.claude.com/docs/en/best-practices), [sessions](https://code.claude.com/docs/en/sessions) (historique des sessions).
 - Anthropic : [How we built Claude Code auto mode](https://www.anthropic.com/engineering/claude-code-auto-mode) (taux d'acceptation, erreurs du classifieur) ; [Prompting best practices](https://platform.claude.com/docs/en/build-with-claude/prompt-engineering/claude-prompting-best-practices) et [Skill authoring best practices](https://platform.claude.com/docs/en/agents-and-tools/agent-skills/best-practices) (écriture des règles et des skills) ; [Effective context engineering for AI agents](https://www.anthropic.com/engineering/effective-context-engineering-for-ai-agents) et [Effective harnesses for long-running agents](https://www.anthropic.com/engineering/effective-harnesses-for-long-running-agents) (reprise d'une session à l'autre).
 - INRAE : [guide du bon usage des IA génératives](https://science-ouverte.inrae.fr/sites/default/files/2026-06/GUIDE_IA_Page_a_p_2605.pdf) et [notice n° 2](https://science-ouverte.inrae.fr/sites/default/files/2026-06/FICHE%20IA_Notice2_2605.pdf) (mai 2026).
 - Évaluation par les pairs : [Elsevier](https://www.elsevier.com/about/policies-and-standards/the-use-of-generative-ai-and-ai-assisted-technologies-in-the-review-process), [Springer Nature](https://www.springer.com/us/editorial-policies/artificial-intelligence--ai-/25428500), [NIH](https://grants.nih.gov/grants/guide/notice-files/NOT-OD-23-149.html).

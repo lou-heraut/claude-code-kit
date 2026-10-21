@@ -4,6 +4,10 @@ Format [Keep a Changelog](https://keepachangelog.com/fr/1.1.0/), numérotation [
 
 ## [Non publié]
 
+### Ajouté
+
+- Skill `kit-worktime` : le temps passé avec Claude Code sur les derniers jours (`/kit-worktime 2` pour hier et aujourd'hui), en frise par demi-heure et en un tableau par jour (projet, activité, date, début, fin, durée), à reporter dans un emploi du temps. Son script lit l'heure des messages, le dossier et le titre des sessions, jamais leur contenu.
+
 ## [1.3.0] - 2026-10-22
 
 ### Ajouté
