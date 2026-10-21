@@ -4,6 +4,8 @@ Format [Keep a Changelog](https://keepachangelog.com/fr/1.1.0/), numérotation [
 
 ## [Non publié]
 
+## [1.3.0] - 2026-10-22
+
 ### Ajouté
 
 - `settings/project.json`, avec la règle `project` : coupe la mémoire automatique de Claude Code (`"autoMemoryEnabled": false`). Pour une installation existante, ajouter cette ligne à `~/.claude/settings.json`. Les notes déjà écrites restent dans `~/.claude/projects/<projet>/memory/` : les relire une fois, reporter ce qui sert dans des fichiers visibles, puis supprimer ces dossiers.
@@ -43,7 +45,8 @@ Format [Keep a Changelog](https://keepachangelog.com/fr/1.1.0/), numérotation [
 - Skills `kit-start`, `kit-end`, `kit-clean` et `kit-audit`, lancés seulement à la demande : reprendre le contexte, mettre à plat une session, nettoyer un projet, faire un audit daté.
 - Installation en quatre étapes, la même pour chaque règle et chaque skill, dans le README.
 
-[Non publié]: https://github.com/lou-heraut/claude-code-kit/compare/v1.2.0...HEAD
+[Non publié]: https://github.com/lou-heraut/claude-code-kit/compare/v1.3.0...HEAD
+[1.3.0]: https://github.com/lou-heraut/claude-code-kit/releases/tag/v1.3.0
 [1.2.0]: https://github.com/lou-heraut/claude-code-kit/releases/tag/v1.2.0
 [1.1.0]: https://github.com/lou-heraut/claude-code-kit/releases/tag/v1.1.0
 [1.0.0]: https://github.com/lou-heraut/claude-code-kit/releases/tag/v1.0.0
